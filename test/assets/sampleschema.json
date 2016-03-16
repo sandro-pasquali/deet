@@ -1,0 +1,20 @@
+{
+    "title": "First and Last",
+    "type": "object",
+    "properties": {
+    "firstName": {
+        "type": "string",
+        "pattern": "^[A-Za-z]+$"
+    },
+    "lastName": {
+        "type": "string",
+        "pattern": "^[A-Za-z_-]+$"
+    },
+    "age": {
+        "description": "Age in years",
+		"type": "integer",
+		"pattern": "^(0?[1-9]|[1-9][0-9])$"
+    }
+},
+    "required": ["firstName", "lastName"]
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/jquery"></script>
+    <script>
+
+        // this should succeed
+        //
+        $.ajax({
+            url: '/',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                firstName: 'Jack',
+                lastName: 'Spratt',
+                age: 33
+            })}
+        );
+
+        // this should fail (illegal age type, should be Integer)
+        //
+        $.ajax({
+            url: '/',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                firstName: 'Jack',
+                lastName: 'Spratt',
+                age: "33"
+            })}
+        );
+/*
+        // test Express route variables
+        //
+        $.ajax({
+            url: '/test/jack/spratt',
+            type: 'POST'
+        });
+*/
+    </script>
+</head>
+<body>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="text" name="textfield"><br />
+    <input type="file" name="filefield"><br />
+    <input type="submit">
+</form>
+
+</body>
+</html>
