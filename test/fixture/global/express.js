@@ -20,7 +20,7 @@ let deet = require('../../../lib')({
     sanitizeURLEncoded : true,
     hidePoweredBy : true,
     hppProtection : true,
-    xFrame : 'deny',
+    frameguard : 'deny',
     xssFilter : true,
     xssCSP : {
 		defaultSrc: ["'unsafe-inline'"],
